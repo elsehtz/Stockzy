@@ -54,7 +54,7 @@ ROOT_URLCONF = 'Stock_Box.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR,'templates')], #BASE_DIR is our Root "Stock_Box" dir, not this current one
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
