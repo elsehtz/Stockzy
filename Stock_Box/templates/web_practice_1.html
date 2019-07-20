@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <!--
   Practice site, marketplace, menu bar at top,
@@ -10,7 +11,7 @@
       <link rel="shortcut icon" href="http://www.brianshim.com/webtricks/wp-content/uploads/2012/11/stars_favicon.png" type="image/x-icon" />
     -->
     <link rel="shortcut icon" href="background.png" type="image/x-icon" />
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="{% static 'css/ayo_css.css' %}">
     <!--Load icon Lib-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="utf-8">
@@ -51,16 +52,16 @@
         </div>
         <div class="collage">
           <ul>
-              <img class="collage" src="william-krause-741173-unsplash.jpg" title="Kings Thrown"></a>
-              <img class="collage" src="william-krause-741173-unsplash.jpg" title="Kings Thrown"></a>
-              <img class="collage" src="william-krause-741173-unsplash.jpg" title="Kings Thrown"></a>
+              <img class="collage" src="{% static 'Ekko/project.jpg' %}" title="Kings Thrown"></a>
+              <img class="collage" src="{% static 'Ekko/sandstorm.jpg' %}" title="Kings Thrown"></a>
+              <img class="collage" src="{% static 'Ekko/skt.jpg' %}" title="Kings Thrown"></a>
             </ul>
         </div>
         <div class="shop-links">
           <ul>
-            <a href="https://www.google.com"><img class="shop-items" src="stock_photos/coat.jpg" title="Kings Thrown"></a>
-            <a href="https://www.google.com"><img class="shop-items" src="stock_photos/shoes.jpg" title="Kings Thrown"></a>
-            <a href="https://www.google.com"><img class="shop-items" src="stock_photos/pants.jpg" title="Kings Thrown"></a>
+            <a href="https://www.google.com"><img class="shop-items" src="{% static 'stock_photos/coat.jpg' %}" title="Kings Thrown"></a>
+            <a href="https://www.google.com"><img class="shop-items" src="{% static 'stock_photos/shoes.jpg' %}" title="Kings Thrown"></a>
+            <a href="https://www.google.com"><img class="shop-items" src="{% static 'stock_photos/pants.jpg' %}" title="Kings Thrown"></a>
           </ul>
         </div>
 

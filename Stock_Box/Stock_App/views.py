@@ -34,7 +34,7 @@ def visual_examples(request):
 # ACTIONS
 def add(request):
 
-    val_1 = request.GET['num_1']
-    val_2 = request.GET['num_2']
+    val_1 = request.POST['num_1']
+    val_2 = request.POST['num_2']
     res = int(val_1) + int(val_2)
     return render(request, 'result.html', {'result':res})

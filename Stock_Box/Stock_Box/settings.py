@@ -118,3 +118,19 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# To use static assets, you must add STATICFILES_DIRS list below for
+# Django to know where your static/assets/etc files are
+# The STATIC_ROOT is then the var name that Django uses to add all
+# Folders and files you have stored somewhere into a single 
+# built-in known directory with a filename you assign; as done below 
+
+# where to get
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'ayo_test/static'),
+    os.path.join(BASE_DIR, 'assets'),
+    os.path.join(BASE_DIR, 'templates')
+]
+
+# where to put
+STATIC_ROOT = os.path.join(BASE_DIR, 'root_assets')
