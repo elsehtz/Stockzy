@@ -6,7 +6,7 @@ body{
   }
   .video-styling{
     display: grid;
-    grid-template-columns: 20% 10% 40% 10% 20%;
+    grid-template-columns: 20% 10% video 10% 20%;
   }
   .background{ 
     margin: 0;
@@ -19,7 +19,7 @@ body{
   nav{
     top:0;
     text-align: center;
-    background: black;
+    background: orangered;
     position: fixed;
     width: 100%;
     z-index:10;
@@ -51,12 +51,13 @@ body{
   }
   
   .video-wrapper {
-    padding-bottom: 20px; /* 16:9 */
+    padding-bottom: 20px; /* 16:9 */ 
     padding-top: 25px;
     text-align: center;
   }
   .video{
     text-align: center;
+    grid-area: video;
   }
   /* .video-Wrapper iframe {
       position: absolute;
