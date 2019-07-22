@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
  
-class Destination:
+class shop_item:
     id: int
     name: str
     img: str

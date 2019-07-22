@@ -4,9 +4,10 @@ body{
     margin:10%;
     text-align: "center";
   }
+
   .video-styling{
     display: grid;
-    grid-template-columns: 20% 10% 40% 10% 20%;
+    grid-template-columns: 20% 10% video 10% 20%;
   }
   .background{ 
     margin: 0;
@@ -19,26 +20,29 @@ body{
   nav{
     top:0;
     text-align: center;
-    background: black;
+    background: orangered;
     position: fixed;
     width: 100%;
     z-index:10;
     font-family: "Verdana", sans-serif;
   }
-  .shop-links{
+  .shop_item{
     text-align: center;
   }
   
-  img.shop-items{
+  img.shop_image{
     vertical-align: center;
     text-align: center;
     padding: 0px 3%;
     max-width: 20%;
-    max-height: 20%;
+    max-height: 400px;
+    min-height: 240px;
   }
   
   .collage{
     text-align: center;
+    
+    
   }
   
   img.collage{
@@ -48,11 +52,14 @@ body{
   }
   
   .video-wrapper {
-      padding-bottom: 20px; /* 16:9 */
-      padding-top: 25px;
+    padding-bottom: 20px; /* 16:9 */ 
+    padding-top: 25px;
     text-align: center;
   }
-  
+  .video{
+    text-align: center;
+    grid-area: video;
+  }
   /* .video-Wrapper iframe {
       position: absolute;
       top: 0;

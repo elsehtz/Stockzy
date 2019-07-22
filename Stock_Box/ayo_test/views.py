@@ -1,12 +1,12 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Destination
+from .models import shop_item
 
 # Create your views here.
 def home(request):
     
-    dest_1 = Destination()
-    dest_1.name = 'Issac'
+    dest_1 = shop_item()
+    dest_1.name = 'Zak'
     dynamic_dict = {
         'long_text' : """NOTE**: THIS IS JUST SAMPLE TEXT TO SHOW THAT THIS IS A DYNAMIC 
                     TEXT SECTION FOR WHATEVER USES YOU MAY HAVE ~ Zak \n\n
