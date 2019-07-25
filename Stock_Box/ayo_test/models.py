@@ -8,3 +8,5 @@ class shop_item:
     img: str
     desc: str
     price: int
+class MySimpleModel(models.Model):
+    col = models.CharField(max_length=10)

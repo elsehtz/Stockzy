@@ -1,25 +1,26 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import ex_obj, stock_cls
+import pandas as pd
 import csv
 # Create your views here.
 
 # PAGES
 def home(request):
-    #response = HttpResponse("Hello world, this is the home page")
-    # pass the request, html file, and dicitonary holding any info, 
-    # that can be accesed by calling the dictionaries index like,
-    # for example, {{name}} (in html file) for a dict {'name':'Zak'}
-    # passed as a third parameter  
-    return render(request, 'home.html', {'name':'Zak'})
+    item_1 = ex_obj()
+    item_2 = ex_obj()
+
+    item_1.name = 'Zak'
+    item_2.name = 'Ayo'
+
+    ex_obj_list = [item_1, item_2]
+    return render(request, 'home.html', {'ex_obj_list': ex_obj_list})
 
 def settings(request):
     return HttpResponse("Settings WIP")
 
 def sign_in(request):
     return HttpResponse("WIP")
-
-def ayo_home(request):
-    return render(request, 'web_practice_1.html')
 
 def visual_examples(request):
     # Example graphs using MSFT df and a HTML/CSV header
@@ -38,3 +39,12 @@ def add(request):
     val_2 = request.POST['num_2']
     res = int(val_1) + int(val_2)
     return render(request, 'result.html', {'result':res})
+
+def get_Stock(request):
+    aapl = stock_cls()
+    aapl.name = 'AAPL'
+    aapl.df = pd.DataFrame({'id': [1, 2, 3, 4],
+                   'a': ['on', 'on', 'off', 'off'],
+                   'b': ['on', 'off', 'on', 'off']})
+
+    return render(request, 'result.html', {'result':aapl})
