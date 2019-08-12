@@ -11,11 +11,7 @@ def stockchart(symbol):
     data, _meta_data = ts.get_intraday(symbol=symbol,interval='1min', outputsize='full')
     print(data)
 
-
     # Graph df as an example
-    data['4. close'].plot()
-    plt.title('Stock chart')
-    plt.show()
     return  data
 
 if __name__ == "__main__":

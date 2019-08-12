@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import ex_obj, stock_cls
+from .models import ex_obj, stock
 import pandas as pd
 import csv
 # Create your views here.
@@ -41,7 +41,7 @@ def add(request):
     return render(request, 'result.html', {'result':res})
 
 def get_Stock(request):
-    aapl = stock_cls()
+    aapl = stock()
     aapl.name = 'AAPL'
     aapl.df = pd.DataFrame({'id': [1, 2, 3, 4],
                    'a': ['on', 'on', 'off', 'off'],

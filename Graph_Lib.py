@@ -2,7 +2,7 @@
 import matplotlib.pyplot as plt
 import matplotlib as pylab
 import seaborn
-
+from datetime import datetime
 # import local script
 import data_retrieval_alpha_vantage as alpha_vantage
 
